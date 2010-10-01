@@ -54,40 +54,40 @@ Usage
 -----
 
 #### Create a Measurement
-  require 'uom'
+    require 'uom'
 
-  UOM::Measurement.new(:g, 1) #=> 1 gram
-  UOM::Measurement.new(:mg, 1) #=> 1 milligram
-  UOM::Measurement.new(:mg_per_l, 1) #=> 1 milligram per liter
+    UOM::Measurement.new(:g, 1) #=> 1 gram
+    UOM::Measurement.new(:mg, 1) #=> 1 milligram
+    UOM::Measurement.new(:mg_per_l, 1) #=> 1 milligram per liter
 
 #### Scale a Measurement
 
-  UOM::Measurement.new(:g, 1).as(:mg) #=> 100 milligrams
+    UOM::Measurement.new(:g, 1).as(:mg) #=> 100 milligrams
 
 #### Measurement arithmetic
 
-  UOM::Measurement.new(:g, 1) * 2 #=> 2 grams
-  UOM::Measurement.new(:g, 2) / UOM::Measurement.new(:l, 1) #=> 2 milligrams per liter
+    UOM::Measurement.new(:g, 1) * 2 #=> 2 grams
+    UOM::Measurement.new(:g, 2) / UOM::Measurement.new(:l, 1) #=> 2 milligrams per liter
 
 #### Parse a measurement String
 
-  "1 g".to_measurement #=> 1 gram Measurement
-  "1 gm".to_measurement #=> 1 gram Measurement
-  "2 grams".to_measurement #=> 2 gram Measurement
+    "1 g".to_measurement #=> 1 gram Measurement
+    "1 gm".to_measurement #=> 1 gram Measurement
+    "2 grams".to_measurement #=> 2 gram Measurement
 
 #### Convert a Measurement
 
-  UOM::Measurement.new(:g, 2).to_f #=> 2.0
-  UOM::Measurement.new(:g, 1).to_s #=> "1 gram"
-  UOM::Measurement.new(:g, 2).to_s #=> "2 grams"
+    UOM::Measurement.new(:g, 2).to_f #=> 2.0
+    UOM::Measurement.new(:g, 1).to_s #=> "1 gram"
+    UOM::Measurement.new(:g, 2).to_s #=> "2 grams"
 
 #### Label a novel unit
 
-  module UOM
-    # joule-pecks per erg-gauss
-    JPEG = Unit.for((JOULE * PECK) / (ERG * GAUSS)).add_abbreviation(:jpeg)
-  end
-  UOM::Measurement.new(:jpeg, 1) #=> 1 jpeg
+    module UOM
+      # joule-pecks per erg-gauss
+      JPEG = Unit.for((JOULE * PECK) / (ERG * GAUSS)).add_abbreviation(:jpeg)
+    end
+    UOM::Measurement.new(:jpeg, 1) #=> 1 jpeg
 
 Changelog
 ---------
