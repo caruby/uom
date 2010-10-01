@@ -1,7 +1,6 @@
 UOM: Unit of Measure library
 ============================
 
-**Homepage**:     [http://caruby.rubyforge.org/](http://caruby.rubyforge.org/)    
 **Git**:          [http://github.com/caruby/uom](http://github.com/caruby/uom)    
 **Author**:       OHSU Knight Cancer Institute    
 **Copyright**:    2010    
