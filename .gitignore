@@ -1,7 +1,7 @@
 .DS_Store
 *.pdf
+*~
 .project
 .loadpath
 *.gem
-/pkg
 /test/results/*
