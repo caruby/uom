@@ -1,4 +1,6 @@
-require File.dirname(__FILE__) + '/lib/uom'
+$:.unshift File.join(File.dirname(__FILE__), 'lib')
+
+require 'uom'
 require 'rbconfig'
 
 UOM::VERSION.replace(ENV['UOM_VERSION']) if ENV['UOM_VERSION']
@@ -7,7 +9,7 @@ SUDO = WINDOWS ? '' : 'sudo'
 
 desc "Builds the gem"
 task :gem do
-  load 'UOM.gemspec'
+  load 'uom.gemspec'
   Gem::Builder.new(SPEC).build
 end
 

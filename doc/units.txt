@@ -1,0 +1,53 @@
+ampere, amperes, A, milliampere, milliamperes, mA, microampere, microamperes, uA, nanoampere, nanoamperes, nA, picoampere, picoamperes, pA, teraampere, teraamperes, TA, gigaampere, gigaamperes, GA, megaampere, megaamperes, MA, kiloampere, kiloamperes, kA
+angstrom, angstroms, a
+astronomical_unit, astronomical_units, AU, AUs
+barye, baryes, Ba, Bas, millibarye, millibaryes, mBa, mBas, microbarye, microbaryes, uBa, uBas, nanobarye, nanobaryes, nBa, nBas, picobarye, picobaryes, pBa, pBas, terabarye, terabaryes, TBa, TBas, gigabarye, gigabaryes, GBa, GBas, megabarye, megabaryes, MBa, MBas, kilobarye, kilobaryes, kBa, kBas
+bit, bits
+bushel, bushels, bu, bus
+byte, bytes, Byte, Bytes, B, b, kilobyte, kilobytes, KByte, KBytes, KB, KBs, megabyte, megabytes, MByte, MBytes, MB, MBs, gigabyte, gigabytes, GByte, GBytes, GB, GBs, terabyte, terabytes, TByte, TBytes, TB, TBs, petabyte, petabytes, PByte, PBytes, PB, PBs
+candela, candelas, cd, cds
+celsius, C
+coulomb, coulombs, millicoulomb, millicoulombs, microcoulomb, microcoulombs, nanocoulomb, nanocoulombs, picocoulomb, picocoulombs, teracoulomb, teracoulombs, gigacoulomb, gigacoulombs, megacoulomb, megacoulombs, kilocoulomb, kilocoulombs
+cup, cups, cp, cps
+day, days
+dram, drams, dr, drs
+dry_gallon, dry_gallons, dry_gal, dry_gals
+dry_pint, dry_pints, dry_pt, dry_pts
+dry_quart, dry_quarts, dry_qt, dry_qts
+dyne, dynes, dyn, dyns, millidyne, millidynes, mdyn, mdyns, microdyne, microdynes, udyn, udyns, nanodyne, nanodynes, ndyn, ndyns, picodyne, picodynes, pdyn, pdyns, teradyne, teradynes, Tdyn, Tdyns, gigadyne, gigadynes, Gdyn, Gdyns, megadyne, megadynes, Mdyn, Mdyns, kilodyne, kilodynes, kdyn, kdyns
+erg, ergs, millierg, milliergs, microerg, microergs, nanoerg, nanoergs, picoerg, picoergs, teraerg, teraergs, gigaerg, gigaergs, megaerg, megaergs, kiloerg, kiloergs
+farad, farads, millifarad, millifarads, microfarad, microfarads, nanofarad, nanofarads, picofarad, picofarads, terafarad, terafarads, gigafarad, gigafarads, megafarad, megafarads, kilofarad, kilofarads
+farenheit, F
+fluid_ounce, fluid_ounces, fl_oz, fl_ozs
+foot, foots, ft, fts
+gallon, gallons, gal, gals
+gauss, gausses, G
+grain, grains, gr, grs
+gram, grams, gm, gms, g, yottagram, yottagrams, Ygm, Ygms, Yg, zettagram, zettagrams, Zgm, Zgms, Zg, exagram, exagrams, Egm, Egms, Eg, teragram, teragrams, Tgm, Tgms, Tg, gigagram, gigagrams, Ggm, Ggms, Gg, megagram, megagrams, Mgm, Mgms, Mg, kilogram, kilograms, kgm, kgms, kg, hectogram, hectograms, hgm, hgms, hg, decagram, decagrams, dagm, dagms, dag, decigram, decigrams, dgm, dgms, dg, centigram, centigrams, cgm, cgms, cg, milligram, milligrams, mgm, mgms, mg, microgram, micrograms, ugm, ugms, ug, nanogram, nanograms, ngm, ngms, ng, picogram, picograms, pgm, pgms, pg, femtogram, femtograms, fgm, fgms, fg, attogram, attograms, agm, agms, ag, zeptogram, zeptograms, zgm, zgms, zg, yoctogram, yoctograms, ygm, ygms, yg
+henry, henries, H
+hour, hours, hr, hrs
+inch, inches, in, ins
+joule, joules, J, millijoule, millijoules, mJ, microjoule, microjoules, uJ, nanojoule, nanojoules, nJ, picojoule, picojoules, pJ, terajoule, terajoules, TJ, gigajoule, gigajoules, GJ, megajoule, megajoules, MJ, kilojoule, kilojoules, kJ
+kelvin, K
+light_year, light_years, ly, lys
+liter, liters, l, L, yottaliter, yottaliters, Yl, YL, zettaliter, zettaliters, Zl, ZL, exaliter, exaliters, El, EL, teraliter, teraliters, Tl, TL, gigaliter, gigaliters, Gl, GL, megaliter, megaliters, Ml, ML, kiloliter, kiloliters, kl, kL, hectoliter, hectoliters, hl, hL, decaliter, decaliters, dal, daL, deciliter, deciliters, dl, dL, centiliter, centiliters, cl, cL, milliliter, milliliters, ml, mL, microliter, microliters, ul, uL, nanoliter, nanoliters, nl, nL, picoliter, picoliters, pl, pL, femtoliter, femtoliters, fl, fL, attoliter, attoliters, al, aL, zeptoliter, zeptoliters, zl, zL, yoctoliter, yoctoliters, yl, yL
+maxwell, maxwells, Mx, Mxs
+meter, meters, m, yottameter, yottameters, Ym, zettameter, zettameters, Zm, exameter, exameters, Em, terameter, terameters, Tm, gigameter, gigameters, Gm, megameter, megameters, Mm, kilometer, kilometers, km, hectometer, hectometers, hm, decameter, decameters, dam, decimeter, decimeters, dm, centimeter, centimeters, cm, millimeter, millimeters, mm, micrometer, micrometers, um, nanometer, nanometers, nm, picometer, picometers, pm, femtometer, femtometers, fm, attometer, attometers, am, zeptometer, zeptometers, zm, yoctometer, yoctometers, ym
+mile, miles, mi, mis
+minute, minutes, min, mins
+mole, moles, mol, mols
+ohm, ohms
+ounce, ounces, oz, ozs
+peck, pecks, pk, pks
+pint, pints, pt, pts
+poise, poises, P, kilopoise, kilopoises, kP, millipoise, millipoises, mP, micropoise, micropoises, uP, nanopoise, nanopoises, nP, picopoise, picopoises, pP
+pound, pounds, lb, lbs
+quart, quarts, qt, qts
+second, seconds, sec, secs, s, millisecond, milliseconds, msec, msecs, ms, microsecond, microseconds, usec, usecs, us, nanosecond, nanoseconds, nsec, nsecs, ns, picosecond, picoseconds, psec, psecs, ps, femtosecond, femtoseconds, fsec, fsecs, fs
+tablespoon, tablespoons, tbsp, tbsps
+teaspoon, teaspoons, tsp, tsps
+tesla, teslas, T, decitesla, deciteslas, dT, centitesla, centiteslas, cT, millitesla, milliteslas, mT, microtesla, microteslas, uT, nanotesla, nanoteslas, nT, picotesla, picoteslas, pT
+ton, tons
+volt, volts, V, millivolt, millivolts, mV, microvolt, microvolts, uV, nanovolt, nanovolts, nV, picovolt, picovolts, pV, teravolt, teravolts, TV, gigavolt, gigavolts, GV, megavolt, megavolts, MV, kilovolt, kilovolts, kV
+weber, webers, Wb, Wbs, milliweber, milliwebers, mWb, mWbs, microweber, microwebers, uWb, uWbs, nanoweber, nanowebers, nWb, nWbs, picoweber, picowebers, pWb, pWbs, teraweber, terawebers, TWb, TWbs, gigaweber, gigawebers, GWb, GWbs, megaweber, megawebers, MWb, MWbs, kiloweber, kilowebers, kWb, kWbs
+yard, yards, yd, yds
