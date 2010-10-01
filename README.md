@@ -1,13 +1,13 @@
 UOM: Unit of Measure library
 ============================
 
-**Homepage**:     [http://caruby.rubyforge.org/](http://caruby.rubyforge.org/)
-**Git**:          [http://github.com/caruby/uom](http://github.com/caruby/uom)
-**Author**:       OHSU Knight Cancer Institute
-**Copyright**:    2010
-**License**:      MIT License
-**Latest Version**: 2010.1
-**Release Date**: September 30th 2010
+**Homepage**:     [http://caruby.rubyforge.org/](http://caruby.rubyforge.org/)    
+**Git**:          [http://github.com/caruby/uom](http://github.com/caruby/uom)    
+**Author**:       OHSU Knight Cancer Institute    
+**Copyright**:    2010    
+**License**:      MIT License    
+**Latest Version**: 2010.1    
+**Release Date**: September 30th 2010    
 
 Synopsis
 --------
@@ -62,7 +62,7 @@ Usage
 
 #### Scale a Measurement
 
-    UOM::Measurement.new(:g, 1).as(:mg) #=> 100 milligrams
+    UOM::Measurement.new(:g, 1).as(:mg) #=> 1000 milligrams
 
 #### Measurement arithmetic
 
