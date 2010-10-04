@@ -88,12 +88,6 @@ Usage
     end
     UOM::Measurement.new(:jpeg, 1) #=> 1 jpeg
 
-Changelog
----------
-
-- **September.30.10**: 2010.1 release
-    - Initial public release
-
 Copyright
 ---------
 
