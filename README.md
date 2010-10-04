@@ -5,7 +5,7 @@ UOM: Unit of Measure library
 **Author**:       OHSU Knight Cancer Institute    
 **Copyright**:    2010    
 **License**:      MIT License    
-**Latest Version**: 2010.1    
+**Latest Version**: 1.2.1    
 **Release Date**: September 30th 2010    
 
 Synopsis
@@ -97,6 +97,6 @@ Changelog
 Copyright
 ---------
 
-UOM &copy; 2010 by [OHSU](mailto:loneyf@ohsu.edu).
-UOM is licensed under the MIT license. Please see the {file:LICENSE} and {file:LEGAL}
+UOM &copy; 2010 by [Oregon Health & Sciences University](mailto:loneyf@ohsu.edu).
+UOM is licensed under the MIT license. Please see the LICENSE and LEGAL
 documents for more information.

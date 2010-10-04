@@ -1,7 +1,8 @@
 .DS_Store
 *.pdf
-*~
 .project
 .loadpath
 *.gem
-/test/results/*
+*.tar*
+/doc/api
+/test/results
