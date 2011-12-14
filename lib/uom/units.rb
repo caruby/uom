@@ -53,7 +53,7 @@ module UOM
   MINUTE = Unit.new(:minute, :min, SECOND, 60)
   HOUR = Unit.new(:hour, :hr, MINUTE, 60)
   DAY = Unit.new(:day, HOUR, 24)
-
+  
   # information
   BIT = Unit.new(:bit, BYTE, 1.0 / 8)
 
@@ -76,6 +76,11 @@ module UOM
   JOULE = Unit.new(:joule, :J, (KILOGRAM * (METER * METER)) / (SECOND * SECOND), *ELECTRONIC_FACTORS)
   ERG = Unit.new(:erg, (GRAM * (CENTIMETER * CENTIMETER)) / (SECOND * SECOND), *ELECTRONIC_FACTORS)
   DYNE = Unit.new(:dyne, :dyn, (GRAM * CENTIMETER) / (SECOND * SECOND), *ELECTRONIC_FACTORS)
+  NEWTON = Unit.new(:newton, :N, (KILOGRAM * METER) / (SECOND * SECOND), *SIMPLE_FACTORS)
+  BAR = Unit.new(:bar, NEWTON, 0.00001, *SIMPLE_FACTORS)
+  PASCAL = Unit.new(:pascal, :Pa, NEWTON / (METER * METER), *SIMPLE_FACTORS)
+  ATMOSPHERE = Unit.new(:atmosphere, :atm, PASCAL, 0.101325, *SIMPLE_FACTORS)
+  TORR = Unit.new(:torr, ATMOSPHERE, 1.0 / 760, *SIMPLE_FACTORS)
   BARYE = Unit.new(:barye, :Ba, GRAM / (CENTIMETER * (SECOND * SECOND)), *ELECTRONIC_FACTORS)
   POISE = Unit.new(:poise, :P, GRAM / (CENTIMETER * SECOND), KILO, MILLI, MICRO, NANO, PICO)
   COULOMB = Unit.new(:coulomb, AMPERE / SECOND, *ELECTRONIC_FACTORS) # C abbreviation is taken by CENTIGRADE
@@ -109,7 +114,7 @@ module UOM
   DRY_GALLON = Unit.new(:dry_gallon, :dry_gal, DRY_QUART, 4)
   PECK = Unit.new(:peck, :pk, DRY_GALLON, 2)
   BUSHEL = Unit.new(:bushel, :bu, PECK, 4)
-
-  # Pressure
+  
+  # Pressure alias
   PSI = Unit.for(:pounds_per_square_inch).add_abbreviation(:psi)
 end
