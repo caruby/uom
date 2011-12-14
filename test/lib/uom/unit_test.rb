@@ -1,19 +1,10 @@
-$:.unshift 'lib'
-$:.unshift '../extensional/lib'
-
+require File.dirname(__FILE__) + '/../helper'
 require "test/unit"
 require 'uom'
 
 # Not to be confused with Test::Unit, UnitTest tests Unit.
 class UnitTest < Test::Unit::TestCase
   include UOM
-
-  private
-
-  # joule-pecks per erg-gauss
-  JPEG = Unit.for((JOULE * PECK) / (ERG * GAUSS)).add_abbreviation(:jpeg)
-
-  public
 
   def test_scale_high_to_low
     assert_equal(4000, METER.as(4, MILLIMETER).to_f, "Scale conversion incorrect")
@@ -42,4 +33,9 @@ class UnitTest < Test::Unit::TestCase
     expected = Measurement.new(:joule_peck, 4) / Measurement.new(:erg_gauss, 1)
     assert_equal(expected, jpeg, "New unit incorrect")
   end
+
+  private
+
+  # joule-pecks per erg-gauss
+  JPEG = Unit.for((JOULE * PECK) / (ERG * GAUSS)).add_abbreviation(:jpeg)
 end

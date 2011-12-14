@@ -1,6 +1,4 @@
-$:.unshift 'lib'
-$:.unshift '../extensional/lib'
-
+require File.dirname(__FILE__) + '/../helper'
 require "test/unit"
 require 'uom'
 
@@ -53,8 +51,12 @@ class UOMTest < Test::Unit::TestCase
     roundtrip = Measurement.new(quotient, 4).as(other).as(quotient)
     assert_equal(Measurement.new(other, 4.0), roundtrip, "Idempotent quotient conversion 4 grams_per_liter => milligrams_per_milliliter incorrect: #{roundtrip}")
   end
+  
+  def test_parse_unknown_factor
+    assert_raises(UOM::MeasurementError, "'1 unknown' didn't raise a measurement error") { "1 unknown".to_measurement }
+  end
 
-  def test_parse
+  def test_parse_known_factors
     assert_equal(Measurement.new(:gram, 1), "1g".to_measurement, "'1g' not parsed")
     assert_equal(Measurement.new(:gram, 1), "1 g".to_measurement, "'1 g' not parsed")
     assert_equal(Measurement.new(:gram, 1), "1 gm".to_measurement, "'1 gm' not parsed")

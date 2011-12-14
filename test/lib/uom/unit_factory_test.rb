@@ -1,7 +1,9 @@
-$:.unshift 'lib'
-$:.unshift '../extensional/lib'
-
+require File.dirname(__FILE__) + '/../helper'
 require "test/unit"
+
+# JRuby SyncEnumerator moved from generator to REXML in JRuby 1.5
+require 'rexml/document'
+
 require 'uom/units'
 
 class UnitFactoryTest < Test::Unit::TestCase
@@ -73,32 +75,11 @@ class UnitFactoryTest < Test::Unit::TestCase
     assert_equal(:kilobyte, @factory.create('kb').label, "KB not recognized")
   end
 
-  # test parsing all possible combinations of labels, abbrevs and factors
+  # Tests parsing all possible combinations of labels, abbrevs and factors.
   def test_all
-    File.open("test/results/uom/units.txt", "w") do |file|
-      UOM::Unit.each do |unit|
-        next if unit.scalar != UOM::UNIT or UOM::CompositeUnit === unit
-        labels = []
-        [UOM::UNIT].concat(unit.permissible_factors.to_a).each do |factor|
-          labels << label = "#{factor}#{unit}"
-          verify_create(label, unit, factor)
-          unless label == label.pluralize then
-            verify_create(label.pluralize, unit, factor)
-            labels << label.pluralize
-          end
-          unit.abbreviations.each do |abbrev|
-            labels << label = "#{factor.abbreviation}#{abbrev}"
-            verify_create(label, unit, factor)
-            abbrev_s = abbrev.to_s
-            unless abbrev_s.length < 2 then
-              plural = label + 's'
-              verify_create(plural, unit, factor)
-              labels << plural
-            end
-          end
-        end
-        file.puts(labels.join(', '))
-      end
+    units = File.open(ALL_UNITS, 'r').map { |line| line.chomp }
+    REXML::SyncEnumerator.new(units, generate_all_units).each do |expected, actual|
+      assert_equal(expected, actual, "Generated units differs from documented units")
     end
   end
 
@@ -108,5 +89,46 @@ class UnitFactoryTest < Test::Unit::TestCase
     unless actual.scalar == UOM::UNIT and scalar.nil? then
       assert_same(scalar, actual.scalar, "Unit '#{label}' scalar factor incorrect")
     end
+  end
+  
+  private
+  
+  ALL_UNITS = File.expand_path('units.txt', File.dirname(__FILE__) + '/../../../doc')
+
+  def generate_all_units
+    basic = UOM::Unit.select do |unit|
+      unit.scalar == UOM::UNIT and not UOM::CompositeUnit === unit
+    end
+    all = basic.map do |unit|
+      labels = []
+      [UOM::UNIT].concat(unit.permissible_factors.to_a).each do |factor|
+        labels << label = "#{factor}#{unit}"
+        verify_create(label, unit, factor)
+        unless label == label.pluralize then
+          verify_create(label.pluralize, unit, factor)
+          labels << label.pluralize
+        end
+        unit.abbreviations.each do |abbrev|
+          labels << label = "#{factor.abbreviation}#{abbrev}"
+          verify_create(label, unit, factor)
+          abbrev_s = abbrev.to_s
+          unless abbrev_s.length < 2 then
+            plural = label + 's'
+            verify_create(plural, unit, factor)
+            labels << plural
+          end
+        end
+      end
+      labels.join(', ')
+    end
+    # combine byte measures
+    byte, std = all.partition { |line| line =~ /byte/ }
+    bh = {}
+    byte.each do |line|
+      key = /^(.*byte),.*/.match(line).captures.first.to_sym
+     bh[key] = line.chomp
+    end
+    std << [:byte, :kilobyte, :megabyte, :gigabyte, :terabyte, :petabyte].map { |k| bh[k] }.join(', ')
+    std.sort
   end
 end
