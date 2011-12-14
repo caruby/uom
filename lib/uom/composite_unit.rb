@@ -1,12 +1,15 @@
 require 'singleton'
-require 'generator'
+
+# JRuby SyncEnumerator moved from generator to REXML in JRuby 1.5.
+require 'rexml/document'
+
 require 'extensional'
 require 'active_support/inflector'
 require 'uom/unit'
 require 'uom/composite_unit_key_canonicalizer'
 
 module UOM
-   # A CompositeUnit represents a measurement unit across more than one dimension, e.g. +:gram_per_liter+.
+   # A CompositeUnit represents a measurement unit across more than one dimension, e.g. :gram_per_liter.
   class CompositeUnit < Unit
     SUPPORTED_OPERATORS = [:/, :*]
 
@@ -48,7 +51,7 @@ module UOM
       # convert the the first axis quantity to the first unit axis
       first = axes[0].as(quantity, unit.axes[0])
       # convert the remaining units
-      vector = SyncEnumerator.new(axes[1..-1], unit.axes[1..-1]).map { |from, to| from.as(1, to).to_f }
+      vector = REXML::SyncEnumerator.new(axes[1..-1], unit.axes[1..-1]).map { |from, to| from.as(1, to).to_f }
       # apply the operator
       vector.inject(first) { |q, item| q.send(@operator, item) }
     end
@@ -71,8 +74,8 @@ module UOM
 
     def create_label
       case @operator
-      when :/ then create_division_label
-      when :* then create_product_label
+        when :/ then create_division_label
+        when :* then create_product_label
       end
     end
 
