@@ -39,6 +39,15 @@ module UOM
       # the first symbol is the label
       labels = params.select { |param| Symbol === param }
       @label = labels.first
+      # the optional Factor parameters are the permissible scaling factors
+      factors = params.select { |param| Factor === param }.to_set
+      # a convertable unit must have a unique factor
+      if converter and factors.size > 1 then
+        raise MeasurementError.new("Derived unit #{label} can have at most one scalar: #{factors.to_a.join(', ')}")
+        @permissible_factors = []
+      else
+        @permissible_factors = factors
+      end
       # a Numeric parameter indicates a conversion multiplier instead of a converter block
       multiplier = params.detect { |param| Numeric === param }
       if multiplier then
@@ -48,15 +57,6 @@ module UOM
         end
         # make the converter block from the multiplier
         converter = lambda { |n| n * multiplier }
-      end
-      # the optional Factor parameters are the permissible scaling factors
-      factors = params.select { |param| Factor === param }.to_set
-      # a convertable unit must have a unique factor
-      if converter and factors.size > 1 then
-        raise MeasurementError.new("Derived unit #{label} can have at most one scalar: #{axes.join(', ')}")
-        @permissible_factors = []
-      else
-        @permissible_factors = factors
       end
       # the optional single Unit parameter is the axis for a derived unit
       axes = params.select { |param| Unit === param }
@@ -184,7 +184,9 @@ module UOM
       converter = @converters[unit]
       return converter.call(quantity) if converter
       # validate the target unit dimension
-      raise MeasurementError.new("Cannot convert #{unit} dimension #{unit.dimension} to #{self} dimension #{@dimension}") unless @dimension == unit.dimension
+      unless @dimension == unit.dimension then
+        raise MeasurementError.new("Cannot convert #{unit} dimension #{unit.dimension} to #{self} dimension #{@dimension}")
+      end
       # convert via an axis pivot intermediary
       pivot = conversion_pivot(unit)
       pivot.as(self.as(quantity, pivot), unit)
