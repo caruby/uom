@@ -27,6 +27,9 @@ module UOM
   # All metric factors.
   METRIC_FACTORS = [YOTTA, ZETTA, EXA, TERA, GIGA, MEGA, KILO, HECTO, DECA, DECI, CENTI, MILLI, MICRO, NANO, PICO, FEMTO, ATTO, ZEPTO, YOCTO]
 
-  # Factors commonly used in electronics
+  # Factors commonly used in electronics.
   ELECTRONIC_FACTORS = [MILLI, MICRO, NANO, PICO, TERA, GIGA, MEGA, KILO]
+
+  # Factors commonly used for measures in a moderate range about 1.
+  SIMPLE_FACTORS = [CENTI, MILLI, MEGA, KILO]
 end
