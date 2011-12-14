@@ -3,24 +3,23 @@ UOM: Unit of Measure library
 
 **Git**:          [http://github.com/caruby/uom](http://github.com/caruby/uom)    
 **Author**:       OHSU Knight Cancer Institute    
-**Copyright**:    2010    
+**Copyright**:    2010, 2011   
 **License**:      MIT License    
-**Latest Version**: 1.2.1    
-**Release Date**: September 30th 2010    
 
 Synopsis
 --------
 
 UOM implements Units of Measurement based on the
-[http://physics.nist.gov/Pubs/SP330/sp330.pdf](International System of Units) (SI).
+[International System of Units](http://physics.nist.gov/Pubs/SP330/sp330.pdf) (SI).
 The base SI units, metric scalar factors and all possible combinations of these units
-are supported out of the box.
+are supported out of the box. Common alternative non-metric measurement systems, e.g.
+US Customary units, are supported with conversions between these units and the SI units.
+Supported units are listed in +doc/units.txt+.
 
-Common alternative non-metric measurement systems, e.g. US Customary units, are
-supported with conversions between these units and the SI units.
 Additional units can be defined with conversion to an existing unit.
 UOM infers full conversion capability between units of the same dimension from
-the minimal number of conversion definitions.
+the minimal number of conversion definitions. See the __Usage__ section
+for an example of combining pre-defined units into a novel unit.
 
 Arithmetic operations between UOM Measurement objects converts the measurement units
 and scalar factors as necessary, including unit products, quotients and powers of
