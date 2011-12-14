@@ -2,6 +2,8 @@ require 'forwardable'
 require 'uom/error'
 require 'uom/units'
 
+# UOM implements Units of Measurement based on the International System of Units.
+# See [http://github.com/caruby/uom] for details.
 module UOM
   # Measurement qualifies a quantity with a unit.
   class Measurement
@@ -110,7 +112,7 @@ class String
   # If unit is given, then this method converts the measurement to the given unit.
   def to_measurement_quantity(unit=nil)
     # remove commas
-    return to_measurement_quantity(delete(',')) if self[',']
+    return delete(',').to_measurement_quantity(unit) if self[',']
     # extract the quantity portion
     quantity_s = self[/\d*\.?\d*/]
     return if quantity_s.nil? or quantity_s == '.'
