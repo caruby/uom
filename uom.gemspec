@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.email         = "caruby.org@gmail.com"
   s.homepage      = "http://github.com/caruby/uom/"
   s.platform      = Gem::Platform::RUBY
-  s.files         = Dir.glob("{lib}/**/*") + Dir.glob("test/lib/**/*") + ['History.txt', 'LEGAL', 'LICENSE', 'README.md']
+  s.files         = Dir.glob("{lib}/**/*") + Dir.glob("test/lib/**/*") + ['History.md', 'LEGAL', 'LICENSE', 'README.md']
   s.test_files    = Dir['test/lib/**/*test.rb']
   s.require_path  = 'lib'
   s.add_dependency('extensional')
