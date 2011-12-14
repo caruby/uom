@@ -1,6 +1,8 @@
 ampere, amperes, A, milliampere, milliamperes, mA, microampere, microamperes, uA, nanoampere, nanoamperes, nA, picoampere, picoamperes, pA, teraampere, teraamperes, TA, gigaampere, gigaamperes, GA, megaampere, megaamperes, MA, kiloampere, kiloamperes, kA
 angstrom, angstroms, a
 astronomical_unit, astronomical_units, AU, AUs
+atmosphere, atmospheres, atm, atms, centiatmosphere, centiatmospheres, catm, catms, milliatmosphere, milliatmospheres, matm, matms, megaatmosphere, megaatmospheres, Matm, Matms, kiloatmosphere, kiloatmospheres, katm, katms
+bar, bars, centibar, centibars, millibar, millibars, megabar, megabars, kilobar, kilobars
 barye, baryes, Ba, Bas, millibarye, millibaryes, mBa, mBas, microbarye, microbaryes, uBa, uBas, nanobarye, nanobaryes, nBa, nBas, picobarye, picobaryes, pBa, pBas, terabarye, terabaryes, TBa, TBas, gigabarye, gigabaryes, GBa, GBas, megabarye, megabaryes, MBa, MBas, kilobarye, kilobaryes, kBa, kBas
 bit, bits
 bushel, bushels, bu, bus
@@ -36,8 +38,10 @@ meter, meters, m, yottameter, yottameters, Ym, zettameter, zettameters, Zm, exam
 mile, miles, mi, mis
 minute, minutes, min, mins
 mole, moles, mol, mols
+newton, newtons, N, centinewton, centinewtons, cN, millinewton, millinewtons, mN, meganewton, meganewtons, MN, kilonewton, kilonewtons, kN
 ohm, ohms
 ounce, ounces, oz, ozs
+pascal, pascals, Pa, Pas, centipascal, centipascals, cPa, cPas, millipascal, millipascals, mPa, mPas, megapascal, megapascals, MPa, MPas, kilopascal, kilopascals, kPa, kPas
 peck, pecks, pk, pks
 pint, pints, pt, pts
 poise, poises, P, kilopoise, kilopoises, kP, millipoise, millipoises, mP, micropoise, micropoises, uP, nanopoise, nanopoises, nP, picopoise, picopoises, pP
@@ -48,6 +52,7 @@ tablespoon, tablespoons, tbsp, tbsps
 teaspoon, teaspoons, tsp, tsps
 tesla, teslas, T, decitesla, deciteslas, dT, centitesla, centiteslas, cT, millitesla, milliteslas, mT, microtesla, microteslas, uT, nanotesla, nanoteslas, nT, picotesla, picoteslas, pT
 ton, tons
+torr, torrs, centitorr, centitorrs, millitorr, millitorrs, megatorr, megatorrs, kilotorr, kilotorrs
 volt, volts, V, millivolt, millivolts, mV, microvolt, microvolts, uV, nanovolt, nanovolts, nV, picovolt, picovolts, pV, teravolt, teravolts, TV, gigavolt, gigavolts, GV, megavolt, megavolts, MV, kilovolt, kilovolts, kV
 weber, webers, Wb, Wbs, milliweber, milliwebers, mWb, mWbs, microweber, microwebers, uWb, uWbs, nanoweber, nanowebers, nWb, nWbs, picoweber, picowebers, pWb, pWbs, teraweber, terawebers, TWb, TWbs, gigaweber, gigawebers, GWb, GWbs, megaweber, megawebers, MWb, MWbs, kiloweber, kilowebers, kWb, kWbs
 yard, yards, yd, yds
