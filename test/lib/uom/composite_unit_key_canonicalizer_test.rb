@@ -1,6 +1,4 @@
-$:.unshift 'lib'
-$:.unshift '../extensional/lib'
-
+require File.dirname(__FILE__) + '/../helper'
 require "test/unit"
 require 'uom/units'
 require 'uom/composite_unit_key_canonicalizer'

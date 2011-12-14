@@ -1,8 +1,6 @@
-$:.unshift 'lib'
-$:.unshift '../extensional/lib'
-
+require File.dirname(__FILE__) + '/../helper'
 require "test/unit"
-require 'measurement'
+require 'uom'
 
 class FactorTest < Test::Unit::TestCase
   def test_small_to_unit
